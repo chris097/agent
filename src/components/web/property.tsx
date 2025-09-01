@@ -19,8 +19,8 @@ const Property = () => {
 
     return (
         <div className="bg-basepink/5 pt-12 pb-24 text-foreground font-montserrat">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center">
+            <div className="lg:max-w-7xl w-[90%] mx-auto">
+                <div className="flex md:flex-row flex-col justify-between items-center">
                     {/* Left section */}
                     <div className="font-montserrat">
                         <h1 className="uppercase leading-5 text-3xl font-medium">Recent Openings</h1>
@@ -30,7 +30,7 @@ const Property = () => {
                     </div>
 
                     {/* Filters */}
-                    <div className="w-auto bg-white h-16 flex items-center p-3 gap-3">
+                    <div className="w-auto bg-white md:h-16 h-auto flex flex-wrap items-center p-3 gap-3 md:mt-0 mt-4">
                         {/* Category */}
                         <Select
                             value={category}
@@ -92,7 +92,7 @@ const Property = () => {
                     </div>
                 </div>
                 <div className='mt-8'>
-                    <div className='grid grid-cols-3 items-center gap-4'>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 items-center gap-4'>
                         {propertyListings?.slice(0, 6)?.map((property, index) => (
                             <Card
                                 title={property.label}

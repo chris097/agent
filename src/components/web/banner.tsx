@@ -11,9 +11,9 @@ const Banner = () => {
                 <Header />
             </div>
             <div className='flex h-full flex-col items-center relative z-50 justify-center text-white'>
-                <h1 className='text-4xl font-semibold leading-14'>Find the Perfect Home Just for You</h1>
-                <p className='text-center w-2xl leading-5'>Looking to rent, buy, or invest in land? You can now connect directly with genuine property owners — no agents, no stress.</p>
-                <div className='h-16 w-4xl bg-basegray rounded-full mt-8 flex gap-2 items-center px-4'>
+                <h1 className='md:text-4xl text-3xl font-semibold md:leading-14 leading-8 text-center md:px-0 px-4'>Find the Perfect Home Just for You</h1>
+                <p className='text-center md:w-2xl leading-5 md:px-0 px-4 mt-2'>Looking to rent, buy, or invest in land? You can now connect directly with genuine property owners — no agents, no stress.</p>
+                <div className='h-16 md:w-4xl w-[90%] bg-basegray rounded-full mt-8 flex gap-2 items-center px-4'>
                     <SearchIcon />
                     <input
                         placeholder='Search for locations'
@@ -26,7 +26,7 @@ const Banner = () => {
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-40" />
         </div>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;

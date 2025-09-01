@@ -31,12 +31,12 @@ const Card = ({
 
 const HowItWorks = () => {
     return (
-        <div className='w-7xl mx-auto my-14'>
+        <div className='lg:max-w-7xl w-[90%] mx-auto my-14'>
             <div>
                 <div className='flex justify-center w-auto'>
                     <h2 className='text-black bg-[#F7F7F7] px-2 py-1 font-medium rounded-md flex border'>How it works</h2>
                 </div>
-                <div className='grid grid-cols-3 gap-6 mt-14'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6 mt-14'>
                     <Card
                         title="Buy a home"
                         description="Lorem ipsum dolor sit amet consectetur. Vel sit non odio nisi urna. In etiam dapibus aliquam ut mi mauris sagittis arcu. Gravida semper iaculis tellus dapibus amet mauris vitae erat. Curabitur neque in "
