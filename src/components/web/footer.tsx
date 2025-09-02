@@ -40,7 +40,7 @@ const Footer = () => {
             <div className='lg:max-w-7xl w-[90%] mx-auto'>
                 <div className='flex md:flex-row flex-col h-full md:items-center'>
                     <div className='flex-1'>
-                        <h1 className="text-2xl text-white font-medium">payAgent</h1>
+                        <h1 className="text-2xl text-white font-medium">payAgentt</h1>
                         <p className='md:w-1/2 mt-3'>Lorem ipsum dolor sit amet consectetur. Vel sit non odio nisi urna. In etiam dapibus aliquam ut mi mauris sagittis arcu. Gravida semper iaculis tellus dapibus  </p>
                         <div className='md:flex hidden gap-3 mt-5'>
                             <IconButton>

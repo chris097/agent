@@ -3,8 +3,13 @@ import React, { useState } from 'react'
 import { landTypes, nigeriaStates, propertyCategories, propertyListings, propertyPrice, propertySize, propertyTypes } from '@/helper/data';
 import Card from './card';
 import Select from '../custom/select';
+import { useRouter } from 'next/navigation';
 
 const Property = () => {
+    // router
+    const router = useRouter();
+
+    // Main states
     const [category, setCategory] = useState("all");
     const [location, setLocation] = useState("all");
 
@@ -104,6 +109,7 @@ const Property = () => {
                                 status={property.status}
                                 cardImg={property.mainImage}
                                 key={index}
+                                onClick={() => router.push(`/property/${index}`)}
                             />
                         ))}
                     </div>

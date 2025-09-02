@@ -2,17 +2,24 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { Menu, X } from "lucide-react";
+import clsx from "clsx";
+import Button from "../custom/button";
 
 const navItems = [
     { name: "For Rent", href: "/rent" },
     { name: "For Sale", href: "/sale" },
 ];
 
-const Header = () => {
+const Header = ({
+    isTextColor = true
+}: {
+    isTextColor?: boolean;
+}) => {
     const pathname = usePathname();
+    const router = useRouter();
     const [showNav, setShowNav] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -54,9 +61,9 @@ const Header = () => {
             style={fadeInAnimation}
             className="fixed top-0 left-0 w-full bg-transparent z-50"
         >
-            <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16 text-white">
+            <div className={`max-w-7xl mx-auto lg:px-0 px-4 flex justify-between items-center h-16 ${isTextColor ? 'text-white' : 'text-black'}`}>
                 {/* Logo */}
-                <h1 className="text-2xl font-medium">payAgent</h1>
+                <h1 className="text-2xl font-medium">payAgentt</h1>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
@@ -70,7 +77,7 @@ const Header = () => {
                                         className={`text-sm font-medium uppercase transition-colors duration-200
                       ${isActive
                                                 ? "text-basegreen"
-                                                : "text-white hover:text-basegreen"
+                                                : `${isTextColor ? 'text-white' : 'text-black'} hover:text-basegreen`
                                             }
                     `}
                                     >
@@ -81,19 +88,19 @@ const Header = () => {
                         })}
                     </ul>
                     <div>
-                        <button className="mr-6 font-medium hover:text-basegreen transition-colors">
+                        <Button onClick={() => router.push('login')} className={`transition-colors bg-transparent ${isTextColor ? '!text-white' : '!text-black'} font-semibold hover:bg-transparent hover:text-basegreen`}>
                             Login
-                        </button>
-                        <button className="bg-basegreen px-4 py-2 rounded-full font-medium hover:bg-basegreen/70 transition-colors">
+                        </Button>
+                        <Button onClick={() => router.push('login')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
                             Register
-                        </button>
+                        </Button>
                     </div>
                 </nav>
 
                 {/* Mobile Menu Toggle */}
                 <button
                     onClick={() => setShowNav(true)}
-                    className="md:hidden text-white focus:outline-none"
+                    className={`md:hidden focus:outline-none ${isTextColor ? 'text-white' : 'text-black'}`}
                 >
                     <Menu size={28} />
                 </button>
@@ -105,13 +112,13 @@ const Header = () => {
                     item && (
                         <animated.div
                             style={styles}
-                            className="fixed top-0 left-0 w-full bg-black text-white flex flex-col p-6 z-50"
+                            className={`fixed top-0 left-0 w-full bg-black flex flex-col p-6 z-50 text-white`}
                         >
                             <div className="flex justify-between items-center mb-10">
                                 <h1 className="text-2xl font-medium">payAgent</h1>
                                 <button
                                     onClick={() => setShowNav(false)}
-                                    className="text-white focus:outline-none"
+                                    className={`text-white focus:outline-none`}
                                 >
                                     <X size={28} />
                                 </button>
@@ -133,13 +140,13 @@ const Header = () => {
                                     );
                                 })}
 
-                                <div className="mt-8 flex flex-col gap-4">
-                                    <button className="font-medium hover:text-basegreen transition-colors">
+                                <div className={`mt-8 flex flex-col gap-4 relative text-white`}>
+                                    <Button onClick={() => router.push('login')} className="transition-colors bg-transparent !text-white font-semibold hover:bg-transparent hover:text-basegreen">
                                         Login
-                                    </button>
-                                    <button className="bg-basegreen px-4 py-2 rounded-full font-medium hover:bg-basegreen/70 transition-colors">
+                                    </Button>
+                                    <Button onClick={() => router.push('login')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
                                         Register
-                                    </button>
+                                    </Button>
                                 </div>
                             </nav>
                         </animated.div>

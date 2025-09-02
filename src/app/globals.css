@@ -10,6 +10,7 @@
   --base-gray: #D9D9D9;
   --primary-gray: #A0A0A0;
   --base-pink: #FFC0CB;
+  --base-blue: #0000FF;
 }
 
 @theme inline {
@@ -17,6 +18,7 @@
   --color-foreground: var(--foreground);
   --color-basegreen: var(--base-green);
   --color-basegray: var(--base-gray);
+  --color-baseblue: var(--base-blue);
   --color-primarygray: var(--primary-gray);
   --color-basepink: var(--base-pink);
   --font-sans: var(--font-geist-sans);

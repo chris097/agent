@@ -13,6 +13,7 @@ interface ICardPros {
     baths?: number;
     status?: string;
     cardImg: StaticImageData | string;
+    onClick?: () => void;
 }
 
 const Card = ({
@@ -23,7 +24,8 @@ const Card = ({
     beds,
     baths,
     status,
-    cardImg
+    cardImg,
+    onClick
 }: ICardPros) => {
     return (
         <div className='border border-[#cccccc]/40 bg-white rounded-[20px] p-4 shadow-xs'>
@@ -56,7 +58,7 @@ const Card = ({
                 <p className='text-base font-semibold text-foreground'>{price}</p>
             </div>
             <div className='w-full mt-6'>
-                <Button className='w-full !rounded-full h-[56px]'>
+                <Button onClick={onClick} className='w-full !rounded-full h-[56px]'>
                     Contact Agent
                 </Button>
             </div>
