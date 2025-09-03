@@ -88,10 +88,10 @@ const Header = ({
                         })}
                     </ul>
                     <div>
-                        <Button onClick={() => router.push('login')} className={`transition-colors bg-transparent ${isTextColor ? '!text-white' : '!text-black'} font-semibold hover:bg-transparent hover:text-basegreen`}>
+                        <Button onClick={() => router.push('/login')} className={`transition-colors bg-transparent ${isTextColor ? '!text-white' : '!text-black'} font-semibold hover:bg-transparent hover:text-basegreen`}>
                             Login
                         </Button>
-                        <Button onClick={() => router.push('login')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
+                        <Button onClick={() => router.push('/register')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
                             Register
                         </Button>
                     </div>
@@ -141,10 +141,10 @@ const Header = ({
                                 })}
 
                                 <div className={`mt-8 flex flex-col gap-4 relative text-white`}>
-                                    <Button onClick={() => router.push('login')} className="transition-colors bg-transparent !text-white font-semibold hover:bg-transparent hover:text-basegreen">
+                                    <Button onClick={() => router.push('/login')} className="transition-colors bg-transparent !text-white font-semibold hover:bg-transparent hover:text-basegreen">
                                         Login
                                     </Button>
-                                    <Button onClick={() => router.push('login')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
+                                    <Button onClick={() => router.push('/register')} className="text-white bg-basegreen px-4 py-2 !rounded-full font-medium hover:bg-basegreen/70 transition-colors">
                                         Register
                                     </Button>
                                 </div>
