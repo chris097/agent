@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { animated, useSpring, useTransition } from "@react-spring/web";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
-import Button from "../custom/button";
+import Button from "../ui/button";
 
 const navItems = [
     { name: "For Rent", href: "/rent" },

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import BuyHome from '../../../public/svgs/buyhome';
-import Button from '../custom/button';
+import Button from '../ui/button';
 import SellProperty from '../../../public/svgs/sellproperty';
 import RentApartment from '../../../public/svgs/rentapartment';
 

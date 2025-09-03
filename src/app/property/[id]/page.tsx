@@ -8,11 +8,12 @@ import img1 from '../../../../public/images/web-card5.png';
 import LocationIcon from '../../../../public/svgs/locationIcon';
 import LeftArrow from '../../../../public/svgs/leftArrow';
 import RightArrow from '../../../../public/svgs/rightArrow';
-import Button from '@/components/custom/button';
+import Button from '@/components/ui/button';
 import Avatar from '../../../../public/svgs/avatar';
 import Map from '../../../../public/svgs/map';
 import { propertyListings } from '@/helper/data';
 import PropertyGallery from '@/components/web/propertygallary';
+import Rating from '../../../../public/svgs/rating';
 
 
 const PropertyDetailPage = () => {
@@ -103,6 +104,7 @@ const PropertyDetailPage = () => {
                                         <LocationIcon />
                                         <p className='text-sm text-primarygray'>Victoria Island, Lagos</p>
                                     </div>
+                                    <Rating />
                                 </div>
                             </div>
                             <Button className='w-full mt-5 h-12 font-medium'>

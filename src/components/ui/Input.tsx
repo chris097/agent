@@ -36,7 +36,7 @@ const Input: React.FC<InputProps> = ({
                 <label
                     htmlFor={name}
                     className={cn(
-                        "block font-montserrat text-base font-medium mb-1 text-foreground leading-5",
+                        "block font-montserrat text-sm font-medium mb-1 text-foreground leading-5",
                         labelClassName
                     )}
                 >

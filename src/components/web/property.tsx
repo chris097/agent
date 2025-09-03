@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { landTypes, nigeriaStates, propertyCategories, propertyListings, propertyPrice, propertySize, propertyTypes } from '@/helper/data';
 import Card from './card';
-import Select from '../custom/select';
+import Select from '../ui/select';
 import { useRouter } from 'next/navigation';
 
 const Property = () => {
@@ -35,7 +35,7 @@ const Property = () => {
                     </div>
 
                     {/* Filters */}
-                    <div className="w-auto bg-white md:h-16 h-auto flex flex-wrap items-center p-3 gap-3 md:mt-0 mt-4">
+                    <div className="w-auto bg-white md:h-16 border-[0.5px] border-[#cccccc]/40 h-auto flex flex-wrap items-center p-3 gap-3 md:mt-0 mt-4">
                         {/* Category */}
                         <Select
                             value={category}
