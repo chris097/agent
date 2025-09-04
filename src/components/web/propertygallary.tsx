@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface PropertyGalleryProps {
-    images: string[] | any[];
+    images: (string | StaticImageData)[];
     autoPlayInterval?: number; // ms
 }
 

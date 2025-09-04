@@ -61,6 +61,7 @@ const Login = () => {
                                             className='w-full lg:h-16 h-14 mt-6 !rounded-full font-medium'
                                             type="submit"
                                             aria-label="Create Account"
+                                            onClick={() => router.push('/property-owner/dashboard')}
                                         >
                                             Login
                                         </Button>

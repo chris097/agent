@@ -1,6 +1,5 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import card from '../../../public/images/web-card1.png';
 import LocationIcon from '../../../public/svgs/locationIcon';
 import Button from '../ui/button';
 

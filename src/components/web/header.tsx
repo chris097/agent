@@ -1,11 +1,9 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { animated, useSpring, useTransition } from "@react-spring/web";
+import { animated, SpringValues, useSpring, useTransition } from "@react-spring/web";
 import { Menu, X } from "lucide-react";
-import clsx from "clsx";
 import Button from "../ui/button";
 
 const navItems = [
@@ -38,15 +36,17 @@ const Header = ({
         return () => window.removeEventListener("scroll", throttled);
     }, []);
 
-    const fadeInAnimation: any = useSpring({
+    const fadeInAnimation: SpringValues<{ opacity: number; transform: string }> = useSpring({
         opacity: isVisible ? 1 : 0,
         transform: `translateY(${isVisible ? "0%" : "-100%"})`,
         config: { tension: 220, friction: 20 },
     });
 
-    const AnimatedHeader = animated.header as React.ComponentType<
-        React.HTMLAttributes<HTMLElement>
-    >;
+    // const AnimatedHeader = animated.header as React.ComponentType<
+    //     React.HTMLAttributes<HTMLElement>
+    //     >;
+
+    const AnimatedHeader = animated("header");
 
     // transition for mobile nav drawer
     const transitions = useTransition(showNav, {
@@ -157,20 +157,21 @@ const Header = ({
 };
 
 // Utility function for throttling
-function throttle(fn: Function, wait: number) {
-    let inThrottle: boolean, lastFn: ReturnType<typeof setTimeout>, lastTime: number;
-    return function (this: any) {
-        const context = this,
-            args = arguments;
+function throttle<T extends (...args: unknown[]) => unknown>(fn: T, wait: number) {
+    let inThrottle = false;
+    let lastFn: ReturnType<typeof setTimeout>;
+    let lastTime = 0;
+
+    return function (this: ThisParameterType<T>, ...args: Parameters<T>): ReturnType<T> | void {
         if (!inThrottle) {
-            fn.apply(context, args);
+            fn.apply(this, args); // ✅ use `this` directly
             lastTime = Date.now();
             inThrottle = true;
         } else {
             clearTimeout(lastFn);
-            lastFn = setTimeout(function () {
+            lastFn = setTimeout(() => {
                 if (Date.now() - lastTime >= wait) {
-                    fn.apply(context, args);
+                    fn.apply(this, args); // ✅ still works
                     lastTime = Date.now();
                 }
             }, Math.max(wait - (Date.now() - lastTime), 0));

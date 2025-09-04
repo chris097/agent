@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import Button from '@/components/ui/button';
 import { OfinEkoCarousel } from '@/components/auth/carousel';
 import { Form, Formik } from 'formik';
 import { Input } from '@/components/ui/Input';
-import GoogleIcon from '../../../public/svgs/google';
 import Select from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 
@@ -15,9 +13,9 @@ const Register = () => {
     const router = useRouter();
 
 
-    const handleCreateAccount = () => {
-        router.push('/account-created');
-    };
+    // const handleCreateAccount = () => {
+    //     router.push('/account-created');
+    // };
 
     return (
         <div>

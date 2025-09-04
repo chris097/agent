@@ -1,16 +1,14 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
-import AutoPlay from "embla-carousel-autoplay";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import first_auth from "../../../public/images/first_auth_img.png";
-import second_auth from "../../../public/images/second_auth_img.png";
-import third_auth from "../../../public/images/third_auth_img.png";
+// import second_auth from "../../../public/images/second_auth_img.png";
+// import third_auth from "../../../public/images/third_auth_img.png";
 
-import logo from "../../../public/svgs/logo-light.svg";
+// import logo from "../../../public/svgs/logo-light.svg";
 
 const slides = [
     {
