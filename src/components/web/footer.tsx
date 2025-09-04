@@ -35,6 +35,7 @@ const IconButton: React.FC<IconButtonProps> = ({
 };
 
 const Footer = () => {
+    const year = new Date().getFullYear();
     return (
         <div className='bg-black h-auto text-white py-14'>
             <div className='lg:max-w-7xl w-[90%] mx-auto'>
@@ -88,7 +89,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <p className='text-center text-xs mt-16'>Copyright © 2025. All Rights Reserved</p>
+                <p className='text-center text-xs mt-16'>Copyright © {year}. All Rights Reserved</p>
             </div>
         </div>
     );

@@ -76,7 +76,7 @@ const Login = () => {
                                                 <p className='font-medium'> Login with Google</p>
                                             </div>
                                         </Button>
-                                        <p className='text-center text-sm mt-10'>Don’t Have an Account? <span onClick={() => router.push('/register')} className='font-medium cursor-pointer hover:text-foreground/70'>Create account</span></p>
+                                        <p className='text-center text-sm mt-10'>Don&apos;t Have an Account? <span onClick={() => router.push('/register')} className='font-medium cursor-pointer hover:text-foreground/70'>Create account</span></p>
                                     </Form>
                                 </Formik>
                             </div>
