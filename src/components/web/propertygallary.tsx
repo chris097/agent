@@ -96,7 +96,7 @@ const PropertyGallery: React.FC<PropertyGalleryProps> = ({
                             onClick={() => setCurrentIndex(actualIndex)}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
-                            className={`relative w-full h-[150px] cursor-pointer rounded-[20px] overflow-hidden 
+                            className={`relative w-full md:h-[150px] h-[80px] cursor-pointer md:rounded-[20px] rounded-md overflow-hidden 
               transition-all duration-300 ${actualIndex === currentIndex ? "ring-2 ring-baseb" : ""
                                 }`}
                         >

@@ -59,7 +59,7 @@ const Header = ({
     return (
         <AnimatedHeader
             style={fadeInAnimation}
-            className="fixed top-0 left-0 w-full bg-transparent z-50"
+            className="fixed top-0 left-0 w-full bg-transparent z-[999]"
         >
             <div className={`max-w-7xl mx-auto lg:px-0 px-4 flex justify-between items-center h-16 ${isTextColor ? 'text-white' : 'text-black'}`}>
                 {/* Logo */}
